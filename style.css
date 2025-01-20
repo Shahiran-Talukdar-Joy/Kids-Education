@@ -185,6 +185,7 @@ main .banner{
     margin-bottom: 55px;
 }
 .arrows {
+    max-width: 1440px;
     text-align: center;
     font-size: 50px;
 }
@@ -203,13 +204,140 @@ main .banner{
     background: linear-gradient(to bottom, #FFFFFF 0%, #fea301 100%),url("assets/bg.png"); 
     background-size: cover;
     background-position: center; 
-    background-blend-mode: overlay
+    background-blend-mode: overlay;
+    display: flex;
+    gap: 10px;
 }
-.stories-container h1{
+.stories-container h1 {
     font-size: 46px;
-    font-weight: bold;
-    line-height: 57px;
     text-align: center;
+    margin-bottom: 80px;
+}
+.story-container {
+    width: 540px;
+    height: 630px;
+    border-radius: 16px;
+    background-color: white;
+
+}
+.story-container .story-img img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.story-container .story-date-1 {
+    display: inline-block;
+    position: relative;
+    background-color: ;
+    font-size: 15px;
+    font-weight: medium;
+    line-height: 28px;
+    padding: 15px 18px;
+    color: white;
+    background-color: #3CD8E8;
+    border-radius: 50px;
+    margin-top: 0px;
+    top: -30px;
+    left: 38px;
+}
+.story-container h2 {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 38px;
+    margin-bottom: 40px;
+    margin-left: 38px;
+}
+.story-container .beautiful {
+    font-size: 15px;
+    line-height: 18px;
+    color: #666666;
+    margin-left: 38px;
+    margin-bottom:34px;
+    margin-top: 35px;
+}
+.more-stories {
+    width: 601px;
+    height: 622px;
+}
+.more-stories .small-story {
+    width: 290px;
+    height: 300px;
+    border-radius: 16px;
+    background-color: white;
+}
+.more-stories .small-story img{
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+}
+.small-story .story-date-2 {
+    position: relative;
+    display: inline-block;
+    top: -25px;
+    background-color: #95B226;
+    color: white;
+    left: 38px;
+    padding: 9px 18px;
+    border-radius: 48px;
+}
+.small-story h3{
+    margin: 17px 35px 27px 38px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/*----------Footer section----------*/
+footer{
+    max-width: 1440px;
+    height: 519px;
+    background-color: #01ACFD;
+}
+.footer-container {
+    width: 1070px;
+    height: 222px;
+    padding-top: 120px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    color: white;
+}
+.kids-edu {
+    display: flex;
+    align-items: center;
+}
+.kids-edu img{
+    width: 82px;
+    height: 81px;
+}
+.kids-edu h1 {
+    font-size: 42px;
+    font-weight: bold;
+    line-height: 39px;
+}
+.kids-edu p{
+    font-size: 20px;
+}
+.about-school h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+.about-school ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contact h3{
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 26px;
+}
+.contact .social-media {
+    display: flex;
+    gap: 10px;
 }
 
 
