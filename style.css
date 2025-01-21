@@ -203,115 +203,115 @@ main .banner{
 }
 
 /*----------Stories section- #fea301-------*/
-.stories-container {
+.stories-section {
     max-width: 1440px;
+    width: 1440px;
     height: 1018px;
     background: linear-gradient(to bottom, #FFFFFF 0%, rgba(254, 161, 1, 0.7) 100%),url("assets/bg.png"); 
     background-size: cover;
     background-position: center; 
     background-blend-mode: overlay;
-
 }
-.great-stories-container {
+.stories-section .story-heading{
+    text-align: center;
+    font-size: 46px;
+    font-weight: bold;
+}
+.stories-container {
     display: flex;
-    gap: 10px;
+    align-items: center;
+    justify-content: center;
     width: 1160px;
     height: 630px;
     padding: 80px 140px;
+    gap: 10px;
+
 }
-.stories-container h1 {
-    font-size: 46px;
-    text-align: center;
-    margin-bottom: 80px;
-}
-.story-container {
+.stories-container .big-story {
     width: 540px;
     height: 630px;
     border-radius: 16px;
     background-color: white;
-
+    border-radius: 16px;
 }
-.story-container .story-img img {
-    width: 100%;
+.stories-container .story-container img{
     border-radius: 16px 16px 0 0;
 }
-.story-container .story-date-1 {
-    display: inline-block;
+.stories-container h1 {
+    font-size: 24;
+    font-weight: bold;
+    margin-left: 38px;
+}
+.big-story .story-date {
     position: relative;
-    background-color: ;
-    font-size: 15px;
-    font-weight: medium;
-    line-height: 28px;
-    padding: 15px 18px;
+    display: inline-block;
+    border-radius: 48px;
+    top: -40px;
+    left: 38px;
     color: white;
     background-color: #3CD8E8;
-    border-radius: 50px;
-    margin-top: 0px;
-    top: -30px;
-    left: 38px;
+    font-family: 'Raleway', sans-serif;
+    padding: 14px 19px;
 }
-.story-container h2 {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 38px;
-    margin-bottom: 40px;
-    margin-left: 38px;
-}
-.story-container .beautiful {
+.stories-container .describe {
     font-size: 15px;
-    line-height: 18px;
+    font-weight: medium;
+    line-height: 28px
     color: #666666;
-    margin-left: 38px;
-    margin-bottom:34px;
-    margin-top: 35px;
+    margin-left: 38px
 }
-.more-stories {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 601px;
-    height: 622px;
-    gap: 10px;
-}
-.more-stories .small-story {
+.small-story-container .small-story {
     width: 290px;
-    height: 300px;
-    border-radius: 16px;
+    height: 301px;
     background-color: white;
+    border-radius: 16px;
 }
-.more-stories .small-story .story-2-bg{
-    background-color: #5D58F0;
-}
-.more-stories .small-story img{
+.small-story .small-story-img img{
+    border-radius: 16px  16px 0 0;
     width: 100%;
-    border-radius: 16px 16px 0 0;
 }
-.small-story .story-date-2 {
-    position: relative;
-    display: inline-block;
-    top: -25px;
+.small-story .small-story-date {
     background-color: #95B226;
     color: white;
+    padding: 9px 17px;
+    border-radius: 45px;
+    display: inline-block;
+    position: relative;
+    top: -35px;
     left: 38px;
-    padding: 9px 18px;
-    border-radius: 48px;
 }
-.small-story h3{
-    margin: 17px 35px 27px 38px;
+.small-story div h2 {
     font-size: 15px;
+    position: relative;
+    margin-top: -25px; 
+    text-align: center;
     font-weight: bold;
+    /* margin-left: 35px; */
 }
-.stories-container .button {
+.small-story-container {
+    width: 601px;
+    height: 622px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#small-story-2 {
+    background-color: #5D58F0;
+}
+
+.button-view{
     text-align: center;
 }
-.stories-container .-story-button button {
+.button-view button {
     background-color: black;
     color: white;
     border-radius: 12px;
     padding: 10px 60px;
     border: none;
     outline: none;
- }
+}
 
 
 
@@ -372,10 +372,14 @@ footer{
 
 /*---------------Responsive------------*/
 @media screen and (max-width: 576px){
+
      header {
         width: 576px;
         max-width: 576px;
-        border: 1px solid orange;
+     }
+     .hr{
+        width: 576px;
+        border: 1px solid orange;=
      }
      header nav {
         width: 544px;
@@ -403,7 +407,7 @@ footer{
         flex-direction: column;
     }
     .banner-text  h1 {
-        font-size: 26px;
+        font-size: 24    px;
         font-weight: bold;
         margin-bottom: 18px;
         text-align: center;
@@ -427,8 +431,8 @@ footer{
         height: 992px;
         margin-bottom: 850px;
     }
-    .curriculum .curricululm-title  {
-        font-size: 26px;
+    .curriculum .curriculum-title  {
+        font-size: 28px;
         text-align: center;
         font-weight: bold;
     }
@@ -442,60 +446,83 @@ footer{
     .arrows {
         display: none;
     }
+    .curriculum .curriculum-container .kinder h1,
+    .curriculum .curriculum-container .elementary h1,
+    .curriculum .curriculum-container .middle h1{
+        font-size: 20px;
+    }
+    .curriculum .curriculum-container .kinder .title,
+    .curriculum .curriculum-container .elementary .title,
+    .curriculum .curriculum-container .middle .title {
+        font-size: 10px;
+    }
+    .curriculum .curriculum-container .kinder .more-1,
+    .curriculum .curriculum-container .elementary .more-2,
+    .curriculum .curriculum-container .middle .more-3{
+        font-size: 10px;
+    }
+    
+   /*------- Stories Section--------*/
+    .stories-section{
+        width: 576px;
+         height: 770px;
+}
+    .stories-section .story-heading {
+        font-size: 25px;
+        text-align: center;
+    }
+    .stories-container .big-story{
+        display: none;
+}
     .stories-container {
         width: 576px;
-        max-width: 576px;
-        height: 768px;
+        padding: 0 16px;
+        height: 565px;
     }
-    .great-stories-container {
+    .small-story-container {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 544px;
-        margin-top: -110px;
-        margin-left: -45px;
+        margin: 0 auto;
     }
-    .stories-container h1 {
-        font-size: 26px;
-        font-weight: bold;
-        padding-top: 40px;
+    .small-story-container .small-story{
+        width: 190px;
+        height: 200px;
+        margin-right: 15px;
     }
-    .story-container {
-        display: none;
-    }
-    .more-stories {
-        display: flex;
-        align-items: center;
-        gap: 11px;
-    }
-    .more-stories .small-story {
-        width: 220px;
-        height: 240px;
-    }
-    .small-story .story-2 {
+    .small-story-container .small-story img {
         width: 100%;
-        position: relative;
-        top: -7px;
-    }
-    .small-story .story-date-2{
-        background-color: #95B226;
+}
+    .small-story-container .small-story .small-story-date {
         border-radius: 28px;
-        font-size: 10px;
-        font-family: 'Raleway', sans-serif;
-    }
-    .small-story h3 {
+        background-color: #95B226;
+        color: white;
+        padding: 6px 11px;
         font-size: 9px;
-        font-weight: bold;
-        line-height: 17px;
-        margin-top: -6px;
+        font-weight: medium;
+        position: relative;
+        top: -25px;
+        left: 25px;
     }
-   
+    #small-story-3 {
+        background-color: #5D58F0;
+    }
+    .small-story-container .small-story h2 {
+        font-size: 9px;
+    }
+    .button-view button{
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 12px;
+        padding: 10 38px;
+    }
 
 
     /*-----------footer---------*/
     footer{
-        margin-top: 180px;
+        margin-top: 0px;
         width: 576px;
         height: 750px;
         background-color: #01ACFD;
