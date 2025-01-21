@@ -11,15 +11,17 @@ header {
 }
 header nav {
     padding: 20px 140px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
-
+header nav .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .school {
     display: flex;
     width: 202px;
     word-spacing: 11px;
+    align-items: center;
 }
 .school p{
   line-height: 30px;
@@ -57,7 +59,7 @@ header nav button{
     border-radius: 12px;
     padding: 10px 60px;
 }
-header nav .menu {
+header nav .menu{
     display: none;
 }
 
@@ -90,6 +92,9 @@ main .banner{
     font-weight: bold;
     border: none;
     outline: none;
+}
+.banner-text {
+    display: none;
 }
 /*---------------standard curriculum----------*/
 .curriculum {
@@ -197,16 +202,22 @@ main .banner{
     border-radius: 50%;
 }
 
-/*----------Stories section--------*/
+/*----------Stories section- #fea301-------*/
 .stories-container {
     max-width: 1440px;
     height: 1018px;
-    background: linear-gradient(to bottom, #FFFFFF 0%, #fea301 100%),url("assets/bg.png"); 
+    background: linear-gradient(to bottom, #FFFFFF 0%, rgba(254, 161, 1, 0.7) 100%),url("assets/bg.png"); 
     background-size: cover;
     background-position: center; 
     background-blend-mode: overlay;
+
+}
+.great-stories-container {
     display: flex;
     gap: 10px;
+    width: 1160px;
+    height: 630px;
+    padding: 80px 140px;
 }
 .stories-container h1 {
     font-size: 46px;
@@ -255,14 +266,21 @@ main .banner{
     margin-top: 35px;
 }
 .more-stories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 601px;
     height: 622px;
+    gap: 10px;
 }
 .more-stories .small-story {
     width: 290px;
     height: 300px;
     border-radius: 16px;
     background-color: white;
+}
+.more-stories .small-story .story-2-bg{
+    background-color: #5D58F0;
 }
 .more-stories .small-story img{
     width: 100%;
@@ -283,8 +301,17 @@ main .banner{
     font-size: 15px;
     font-weight: bold;
 }
-
-
+.stories-container .button {
+    text-align: center;
+}
+.stories-container .-story-button button {
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    padding: 10px 60px;
+    border: none;
+    outline: none;
+ }
 
 
 
@@ -343,45 +370,165 @@ footer{
 
 
 
-
-@media  screen and (max-width: 390px) {
-    /*--------Header section-------*/
-    header {
-        width: 390px;
+/*---------------Responsive------------*/
+@media screen and (max-width: 576px){
+     header {
+        width: 576px;
+        max-width: 576px;
         border: 1px solid orange;
-        height: 70px;
+     }
+     header nav {
+        width: 544px;
+        padding: 12px 16px;
+        align-items: center;
+     }
+     .school p,
+     .main-nav,
+     nav button{
+        display: none;
+     }
+    header nav .menu{
+        display: block;
     }
-    header nav {
-        width: 358px;
-        height: 46px;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: space-between;
-    }
-    header .school img {
-        width: 46px;
-        height: 46px;
-    }
-    .school p, 
-    .main-nav,
-    button {
+    /*----------banner---------*/
+    .banner-text-container {
         display: none;
     }
-    header nav .menu {
+    .banner-text {
         display: block;
-        width: 30px;
-        height: 30px;
+        text-align: center;
     }
-    /*------------Banner Secrion----------*/
     .banner {
-        width: 357px;
-        height: 725px;
-        padding: 0px 16px;
+        display: flex;
+        flex-direction: column;
     }
-}    
+    .banner-text  h1 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 18px;
+        text-align: center;
+    }
+    .banner-text p {
+        font-size: 14px;
+        font-weight: medium;
+    }
+    .banner-text .button-1 {
+        background-color: black;
+        color: white;
+        border-radius: 8px;
+        padding: 6px 24px;
+        border: none;
+        outline: none;
+    }
+    /* ----------Curriculum---------*/
+    .curriculum {
+        width: 576px;
+        max-width: 576px;
+        height: 992px;
+        margin-bottom: 850px;
+    }
+    .curriculum .curricululm-title  {
+        font-size: 26px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .curriculum-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .arrows {
+        display: none;
+    }
+    .stories-container {
+        width: 576px;
+        max-width: 576px;
+        height: 768px;
+    }
+    .great-stories-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 544px;
+        margin-top: -110px;
+        margin-left: -45px;
+    }
+    .stories-container h1 {
+        font-size: 26px;
+        font-weight: bold;
+        padding-top: 40px;
+    }
+    .story-container {
+        display: none;
+    }
+    .more-stories {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+    }
+    .more-stories .small-story {
+        width: 220px;
+        height: 240px;
+    }
+    .small-story .story-2 {
+        width: 100%;
+        position: relative;
+        top: -7px;
+    }
+    .small-story .story-date-2{
+        background-color: #95B226;
+        border-radius: 28px;
+        font-size: 10px;
+        font-family: 'Raleway', sans-serif;
+    }
+    .small-story h3 {
+        font-size: 9px;
+        font-weight: bold;
+        line-height: 17px;
+        margin-top: -6px;
+    }
+   
 
 
-
+    /*-----------footer---------*/
+    footer{
+        margin-top: 180px;
+        width: 576px;
+        height: 750px;
+        background-color: #01ACFD;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-info {
+        margin-left: 30px;
+    }
+    .footer-info .kids-edu img {
+        width: 70px;
+    }
+    .footer-info .kids-edu h1{
+        font-size: 35px;
+    }
+    .about-school h3 {
+        margin-left: 20px;
+        font-size: 30px;
+    }
+    .about-school ul li{
+        font-size: 16;
+        margin-left: -17px;
+    }
+    .contact h3{
+        font-size: 22px;
+        margin-left: 30px;
+    }
+    .contact .social-media img {
+        margin-left: 30px;
+    }
+}   
 
 
 
