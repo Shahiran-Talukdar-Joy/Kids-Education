@@ -1,7 +1,6 @@
 body {
     max-width: 1440px;
     font-family: 'Quicksand', sans-serif;
-    /* background: rgb(30, 30, 30); */
 }
 
 /*-------------Header-------------*/
@@ -54,6 +53,7 @@ header nav button{
     color: white;
     font-family: 20px;
     font-weight: 600;
+    font-size: 20px;
     border: none;
     outline: none;
     border-radius: 12px;
@@ -65,7 +65,7 @@ header nav .menu{
 
 /*----------------main section--------------*/
 main .banner{
-     margin: 0 140px;
+    margin: 0 140px;
 }
 .banner {
     display: flex;
@@ -103,6 +103,11 @@ main .banner{
     height: 880px;
     padding: 60px 0;
 }
+.curriculum .marq{
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
 .curriculum .curriculum-title{
     text-align: center;
     font-weight: bold;
@@ -112,8 +117,9 @@ main .banner{
 }
 .curriculum-container {
     display: flex;
-    margin: 80px 140px;
+    margin: -60px 140px;
     gap: 28px;
+    
 }
 .kinder,
 .elementary,
@@ -207,12 +213,13 @@ main .banner{
     max-width: 1440px;
     width: 1440px;
     height: 1018px;
-    background: linear-gradient(to bottom, #FFFFFF 0%, rgba(254, 161, 1, 0.7) 100%),url("assets/bg.png"); 
+    background: linear-gradient(to bottom, #FFFFFF 0%, rgba(254, 161, 1, 0.7) 100%), url("assets/bg.png"); 
     background-size: cover;
     background-position: center; 
     background-blend-mode: overlay;
 }
 .stories-section .story-heading{
+    margin-top: 40px;
     text-align: center;
     font-size: 46px;
     font-weight: bold;
@@ -225,6 +232,7 @@ main .banner{
     height: 630px;
     padding: 80px 140px;
     gap: 10px;
+    margin-top: -40px;
 
 }
 .stories-container .big-story {
@@ -256,9 +264,9 @@ main .banner{
 .stories-container .describe {
     font-size: 15px;
     font-weight: medium;
-    line-height: 28px
+    line-height: 28px;
     color: #666666;
-    margin-left: 38px
+    margin-left: 38px;
 }
 .small-story-container .small-story {
     width: 290px;
@@ -286,7 +294,6 @@ main .banner{
     margin-top: -25px; 
     text-align: center;
     font-weight: bold;
-    /* margin-left: 35px; */
 }
 .small-story-container {
     width: 601px;
@@ -311,6 +318,8 @@ main .banner{
     padding: 10px 60px;
     border: none;
     outline: none;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
@@ -379,7 +388,7 @@ footer{
      }
      .hr{
         width: 576px;
-        border: 1px solid orange;=
+        border: 1px solid orange;
      }
      header nav {
         width: 544px;
@@ -420,15 +429,17 @@ footer{
         background-color: black;
         color: white;
         border-radius: 8px;
-        padding: 6px 24px;
+        padding: 8px 26px;
         border: none;
         outline: none;
+        font-size: 16px;
+        font-weight: bold;
     }
     /* ----------Curriculum---------*/
     .curriculum {
         width: 576px;
         max-width: 576px;
-        height: 992px;
+        height: 900px;
         margin-bottom: 850px;
     }
     .curriculum .curriculum-title  {
@@ -465,7 +476,7 @@ footer{
    /*------- Stories Section--------*/
     .stories-section{
         width: 576px;
-         height: 770px;
+        height: 770px;
 }
     .stories-section .story-heading {
         font-size: 25px;
@@ -503,6 +514,9 @@ footer{
         position: relative;
         top: -25px;
         left: 25px;
+    }
+    #last-story {
+        margin-top: -170px;
     }
     #small-story-3 {
         background-color: #5D58F0;
